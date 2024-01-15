@@ -17,7 +17,7 @@
   <button type="button" @click="callOtherMethod">呼叫另一個 methods</button>
 
   <h3>參數傳入</h3>
-  <button type="button" @click="methodParameter()">參數傳入</button>
+  <button type="button" @click="methodParameter(1,2,3,$event)">參數傳入</button>
 
   <h3>使用 methods 處理複雜資料</h3>
   <ul>
@@ -75,8 +75,8 @@ const App = {
       console.log(name, '此事件被觸發了')
     },
     callOtherMethod(product) {
-      // this.trigger('由 callOtherMethod 觸發')
-      console.log(product);
+      this.trigger('由 callOtherMethod 觸發')
+      // console.log(product);
     },
     methodParameter(a, b, c, d) {
       console.log(a, b, c, d)
